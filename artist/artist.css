@@ -72,6 +72,7 @@
   }
   .main-card-item img,
   .card-img-top {
+    background-size: cover;
     width: 270px;
     height: 160px;
   }
@@ -82,6 +83,11 @@
 @media screen and (max-width: 780px) {
   .banner {
     height: 45vh;
+  }
+  .card-img-top {
+    background-size: cover;
+    width: 100%;
+    height: 250px;
   }
 }
 
@@ -105,8 +111,12 @@
   .main-card-item img,
   .card-body,
   .card-img-top {
-    width: 360px;
-    height: 250px;
+    background-size: cover;
+    width: 100%;
+  }
+  .card {
+    margin: auto;
+    width: 300px;
   }
 }
 
@@ -268,6 +278,13 @@
   .detail-intro-title-6 {
     font-size: 16px;
   }
+  .detail-intro-img-body {
+    text-align: center;
+    justify-content: center;
+    object-fit: cover;
+    background-size: cover;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -288,5 +305,9 @@
   }
   .detail-intro-img {
     height: 50vh;
+  }
+  .detail-intro-img-body {
+    text-align: center;
+    justify-content: center;
   }
 }

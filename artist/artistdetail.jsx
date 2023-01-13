@@ -46,8 +46,8 @@ function ArtistDetail() {
           </div>
         </div>
         <div>
-          <div>
-           <img className="detail-intro-img-body"
+          <div className="detail-intro-img-body">
+           <img 
               src={require('./artist_self.png')}
               alt="map"
             />
