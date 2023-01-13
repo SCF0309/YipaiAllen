@@ -57,7 +57,7 @@ function Artist() {
               </div>
               
               <div className="col-7"></div>
-              <Button className="button col-4 text-nowrap" variant="dark">
+              <Button className="button-new-old col-4 text-nowrap" variant="dark">
                 由新至舊<TbArrowsSort />
               </Button>
               
