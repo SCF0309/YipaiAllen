@@ -65,7 +65,7 @@
 }
 @media screen and (max-width: 1080px) {
   .banner {
-    height: 60vh;
+    height: 80vh;
   }
   .bannerImg {
     height: 100%;
@@ -82,7 +82,7 @@
 }
 @media screen and (max-width: 780px) {
   .banner {
-    height: 45vh;
+    height: 70vh;
   }
   .card-img-top {
     background-size: cover;
@@ -100,7 +100,7 @@
     font-weight: 800;
   }
   .banner {
-    height: 25vh;
+    height: 70vh;
   }
   .aside-menu {
     display: none;
