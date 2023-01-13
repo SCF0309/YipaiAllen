@@ -5,6 +5,7 @@ import "./artist.css";
 import Dropdown from "react-bootstrap/Dropdown";
 import Pagination from "react-bootstrap/Pagination";
 import Button from "react-bootstrap/Button";
+import { TbArrowsSort } from 'react-icons/tb'
 import "bootstrap/dist/css/bootstrap.min.css";
 import cat from './cat.jpeg'
 import artist_head from './artist_head.png'
@@ -24,7 +25,7 @@ function Artist() {
             <h3>藝術家</h3>
             <hr />
             <Dropdown>
-              <Dropdown.Toggle variant="dark" id="dropdown-basic">
+              <Dropdown.Toggle variant="--color-bg " style={{border:"none"}} id="dropdown-basic">
                 依名字排序
               </Dropdown.Toggle>
               <Dropdown.Menu>
@@ -34,7 +35,7 @@ function Artist() {
             </Dropdown>
             <br />
             <Dropdown>
-              <Dropdown.Toggle variant="dark" id="dropdown-basic">
+              <Dropdown.Toggle variant="--color-bg" style={{border:"none"}} id="dropdown-basic">
                 依總銷售量
               </Dropdown.Toggle>
               <Dropdown.Menu>
@@ -57,8 +58,9 @@ function Artist() {
               
               <div className="col-7"></div>
               <Button className="button col-4 text-nowrap" variant="dark">
-                由新至舊
+                由新至舊<TbArrowsSort />
               </Button>
+              
             </div>
         <div class="album py-5">
         <div class="container">
