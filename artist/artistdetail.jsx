@@ -39,17 +39,18 @@ function ArtistDetail() {
               <div className="share">
                 <Link to="#">
                   <FiShare className="share_icon" />
-                  分享
+                  分享此藝術家
                 </Link>
               </div>
             </div>
           </div>
         </div>
         <div>
-          <div className="detail-intro-img-body">
-           <img 
+        
+          <div className="detail-intro-img-body py-5">
+           <img className="detail-intro-img"
               src={require('./artist_self.png')}
-              alt="map"
+              alt="artist-intro-pic"
             />
           </div>
         </div>

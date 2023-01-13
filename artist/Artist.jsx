@@ -65,7 +65,7 @@ function Artist() {
         <div class="album py-5 ">
         <div class="container ">
           <div class="row">
-            <div class="col-md-4">              
+            <div class="col-md-6 col-lg-4">              
               <div class="card mb-5 box-shadow"> 
                 <img class="card-img-top" src={cat} alt="Card image cap" />
                 <div class="card-body">   
@@ -84,7 +84,26 @@ function Artist() {
                 </div>
               </div>
             </div>
-            <div class="col-md-4">              
+            <div class="col-md-6 col-lg-4">              
+              <div class="card mb-5 box-shadow"> 
+                <img class="card-img-top" src={cat} alt="Card image cap" />
+                <div class="card-body">   
+                  <Link to='artistdetail'>              
+                    <div class="d-flex justify-content-center align-items-center">
+                      <div class="btn-group">                    
+                        <img class="card-img-body" src={cat} alt="Card image cap" />
+                        <div class="artistHead"></div>                      
+                        </div>
+                      <div className="text-container">                      
+                        <p class="card-text">Yannick Aaron</p>
+                        <small class="text-muted">French</small>
+                      </div>                                        
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">              
               <div class="card mb-5 box-shadow"> 
                 <img class="card-img-top" src={cat} alt="Card image cap" />
                 <div class="card-body">   
@@ -103,7 +122,7 @@ function Artist() {
                 </div>
               </div>
             </div>
-            <div class="col-md-4">              
+            <div class="col-md-6 col-lg-4">              
               <div class="card mb-5 box-shadow"> 
                 <img class="card-img-top" src={cat} alt="Card image cap" />
                 <div class="card-body">   
@@ -122,7 +141,7 @@ function Artist() {
                 </div>
               </div>
             </div>
-            <div class="col-md-4">              
+            <div class="col-md-6 col-lg-4">              
               <div class="card mb-5 box-shadow"> 
                 <img class="card-img-top" src={cat} alt="Card image cap" />
                 <div class="card-body">   
@@ -141,7 +160,7 @@ function Artist() {
                 </div>
               </div>
             </div>
-            <div class="col-md-4">              
+            <div class="col-md-6 col-lg-4">              
               <div class="card mb-5 box-shadow"> 
                 <img class="card-img-top" src={cat} alt="Card image cap" />
                 <div class="card-body">   
@@ -160,7 +179,7 @@ function Artist() {
                 </div>
               </div>
             </div>
-            <div class="col-md-4">              
+            <div class="col-md-6 col-lg-4">              
               <div class="card mb-5 box-shadow"> 
                 <img class="card-img-top" src={cat} alt="Card image cap" />
                 <div class="card-body">   
@@ -179,7 +198,7 @@ function Artist() {
                 </div>
               </div>
             </div>
-            <div class="col-md-4">              
+            <div class="col-md-6 col-lg-4">              
               <div class="card mb-5 box-shadow"> 
                 <img class="card-img-top" src={cat} alt="Card image cap" />
                 <div class="card-body">   
@@ -198,26 +217,7 @@ function Artist() {
                 </div>
               </div>
             </div>
-            <div class="col-md-4">              
-              <div class="card mb-5 box-shadow"> 
-                <img class="card-img-top" src={cat} alt="Card image cap" />
-                <div class="card-body">   
-                  <Link to='artistdetail'>              
-                    <div class="d-flex justify-content-center align-items-center">
-                      <div class="btn-group">                    
-                        <img class="card-img-body" src={artist_head} alt="Card image cap" />
-                        <div class="artistHead"></div>                      
-                        </div>
-                      <div className="text-container">                      
-                        <p class="card-text">Yannick Aaron</p>
-                        <small class="text-muted">French</small>
-                      </div>                                        
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">              
+            <div class="col-md-6 col-lg-4">              
               <div class="card mb-5 box-shadow"> 
                 <img class="card-img-top" src={cat} alt="Card image cap" />
                 <div class="card-body">   
