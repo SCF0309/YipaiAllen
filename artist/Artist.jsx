@@ -19,7 +19,7 @@ function Artist() {
           <div class="artistImg"></div>
         </div>
       </header>
-      <div class="container">
+      <div class="artist-container">
         <div class="artist-main-content">
           <nav class="artist-aside-menu">
             <h3>藝術家</h3>
@@ -56,17 +56,17 @@ function Artist() {
                 </Link>                
               </div>
               
-              <div className="col-7"></div>
+              <div className="col-1"></div>
               <Button className="button-new-old col-4 text-nowrap" variant="dark">
                 由新至舊<TbArrowsSort />
               </Button>
               
             </div>
         <div class="album py-5 ">
-        <div class="container ">
-          <div class="row">
+        <div class="artist-container ">
+          <div class="row artist-row">
             <div class="col-md-6 col-lg-4">              
-              <div class="card artist-card mb-5 box-shadow"> 
+              <div class="artist-card mb-5 box-shadow"> 
                 <img class="artist-card-img-top" src={cat} alt="Card image cap" />
                 <div class="card-body">   
                   <Link to='artistdetail'>              
@@ -85,7 +85,7 @@ function Artist() {
               </div>
             </div>
             <div class="col-md-6 col-lg-4">              
-              <div class="card artist-card mb-5 box-shadow"> 
+              <div class="artist-card mb-5 box-shadow"> 
                 <img class="artist-card-img-top" src={cat} alt="Card image cap" />
                 <div class="card-body">   
                   <Link to='artistdetail'>              
@@ -104,7 +104,7 @@ function Artist() {
               </div>
             </div>
             <div class="col-md-6 col-lg-4">              
-              <div class="card artist-card mb-5 box-shadow"> 
+              <div class="artist-card mb-5 box-shadow"> 
                 <img class="artist-card-img-top" src={cat} alt="Card image cap" />
                 <div class="card-body">   
                   <Link to='artistdetail'>              
@@ -123,7 +123,7 @@ function Artist() {
               </div>
             </div>
             <div class="col-md-6 col-lg-4">              
-              <div class="card artist-card mb-5 box-shadow"> 
+              <div class="artist-card mb-5 box-shadow"> 
                 <img class="artist-card-img-top" src={cat} alt="Card image cap" />
                 <div class="card-body">   
                   <Link to='artistdetail'>              
@@ -142,7 +142,7 @@ function Artist() {
               </div>
             </div>
             <div class="col-md-6 col-lg-4">              
-              <div class="card artist-card mb-5 box-shadow"> 
+              <div class="artist-card mb-5 box-shadow"> 
                 <img class="artist-card-img-top" src={cat} alt="Card image cap" />
                 <div class="card-body">   
                   <Link to='artistdetail'>              
@@ -161,7 +161,7 @@ function Artist() {
               </div>
             </div>
             <div class="col-md-6 col-lg-4">              
-              <div class="card artist-card mb-5 box-shadow"> 
+              <div class="artist-card mb-5 box-shadow"> 
                 <img class="artist-card-img-top" src={cat} alt="Card image cap" />
                 <div class="card-body">   
                   <Link to='artistdetail'>              
@@ -180,7 +180,7 @@ function Artist() {
               </div>
             </div>
             <div class="col-md-6 col-lg-4">              
-              <div class="card artist-card mb-5 box-shadow"> 
+              <div class="artist-card mb-5 box-shadow"> 
                 <img class="artist-card-img-top" src={cat} alt="Card image cap" />
                 <div class="card-body">   
                   <Link to='artistdetail'>              
@@ -199,7 +199,7 @@ function Artist() {
               </div>
             </div>
             <div class="col-md-6 col-lg-4">              
-              <div class="card artist-card mb-5 box-shadow"> 
+              <div class="artist-card mb-5 box-shadow"> 
                 <img class="artist-card-img-top" src={cat} alt="Card image cap" />
                 <div class="card-body">   
                   <Link to='artistdetail'>              
@@ -218,7 +218,7 @@ function Artist() {
               </div>
             </div>
             <div class="col-md-6 col-lg-4">              
-              <div class="card artist-card mb-5 box-shadow"> 
+              <div class="artist-card mb-5 box-shadow"> 
                 <img class="artist-card-img-top" src={cat} alt="Card image cap" />
                 <div class="card-body">   
                   <Link to='artistdetail'>              
