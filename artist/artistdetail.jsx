@@ -10,8 +10,8 @@ import { ImPhone } from 'react-icons/im'
 function ArtistDetail() {
   return (
     <>
-      <div className="artist-detail-img">
-        <img className="artist-detail-aside-pic" src={require('./artistIntro.png')} alt="aside" />
+      <div className="detail-img">
+        <img className="aside-pic" src={require('./artistIntro.png')} alt="aside" />
         
         <div className="artist-detail-name">
           <h1 className="artist-country">France</h1>
@@ -30,15 +30,15 @@ function ArtistDetail() {
             </div>            
             <br />
             <div className="icon">
-              <div className="artist-collect">
+              <div className="collect">
                 <Link to="#">
-                  <FaHeart className="artist-FaHeart_icon" />
+                  <FaHeart className="FaHeart_icon" />
                   收藏
                 </Link>
               </div>
-              <div className="artist-share">
+              <div className="share">
                 <Link to="#">
-                  <FiShare className="artist-share_icon" />
+                  <FiShare className="share_icon" />
                   分享此藝術家
                 </Link>
               </div>

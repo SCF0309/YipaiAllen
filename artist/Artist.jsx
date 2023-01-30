@@ -10,18 +10,32 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import cat from './cat.jpeg'
 import artist_head from './artist_head.png'
 // import { Button } from 'react-bootstrap';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 
 function Artist() {
+  const [users, setArtist] = useState([]);
+
+  useEffect(() => {
+    console.log('第二個參數是空陣列');
+    // 在 component 初始化的時候跑一次
+    // 通常會把去跟後端要資料的動作放在這裡
+    async function getArtist() {
+      let response = await axios.get('http://localhost:3001/users');
+      setArtist(response.data);
+    }
+    getArtist();
+  }, []);
   return (
     <>
       <header>
-        <div class="artist-banner">
-          <div class="artistImg"></div>
+        <div className="artist-banner">
+          <div className="artistImg"></div>
         </div>
       </header>
-      <div class="artist-container">
-        <div class="artist-main-content">
-          <nav class="artist-aside-menu">
+      <div className="artist-container">
+        <div className="artist-main-content">
+          <nav className="artist-aside-menu">
             <h3>藝術家</h3>
             <hr />
             <Dropdown>
@@ -56,184 +70,41 @@ function Artist() {
                 </Link>                
               </div>
               
-              <div className="col-1"></div>
+              <div className="col-7"></div>
               <Button className="button-new-old col-4 text-nowrap" variant="dark">
                 由新至舊<TbArrowsSort />
               </Button>
               
             </div>
-        <div class="album py-5 ">
-        <div class="artist-container ">
-          <div class="row artist-row">
-            <div class="col-md-6 col-lg-4">              
-              <div class="artist-card mb-5 box-shadow"> 
-                <img class="artist-card-img-top" src={cat} alt="Card image cap" />
-                <div class="card-body">   
-                  <Link to='artistdetail'>              
-                    <div class="d-flex justify-content-center align-items-center">
-                      <div class="btn-group">                    
-                        <img class="artist-card-img-body" src={artist_head} alt="Card image cap" />
-                        <div class="artistHead"></div>                      
+        <div className="album py-5 ">
+        <div className="artist-container ">
+          <div className="row align-items-start">
+            <div className="">              
+              <div className="artist-card mb-5 box-shadow"> 
+              {users.map((users, index) => {
+                return(
+                    <div key={users.users_id}>
+                      <Link to={`/users/${users.users_id}`}>
+                        <div className="position-relative px-3 py-5">
+                          <img className="artist-card-img-top" src={users.user_imagePage} alt="Card image page" />
+                          <div className="artist-card-body">
+                            <div className="artist-btn-group">
+                            <div class="d-flex justify-content-space-evenly align-items-center">
+                              <img className="artist-card-img-body" src={users.user_imageHead} alt="Card image" />
+                              <div className="artist-text-container">                      
+                              <p class="artist-card-text">{users.users_name}</p>
+                              <small class="text-muted">查看更多</small>
+                              </div>        
+                            </div>
+                            </div>
+                          </div>    
                         </div>
-                      <div className="artist-text-container">                      
-                        <p class="card-text">Yannick Aaron</p>
-                        <small class="text-muted">French</small>
-                      </div>                                        
+                        <h6></h6>
+                      </Link>
                     </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">              
-              <div class="artist-card mb-5 box-shadow"> 
-                <img class="artist-card-img-top" src={cat} alt="Card image cap" />
-                <div class="card-body">   
-                  <Link to='artistdetail'>              
-                    <div class="d-flex justify-content-center align-items-center">
-                      <div class="btn-group">                    
-                        <img class="artist-card-img-body" src={cat} alt="Card image cap" />
-                        <div class="artistHead"></div>                      
-                        </div>
-                      <div className="artist-text-container">                      
-                        <p class="card-text">Yannick Aaron</p>
-                        <small class="text-muted">French</small>
-                      </div>                                        
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">              
-              <div class="artist-card mb-5 box-shadow"> 
-                <img class="artist-card-img-top" src={cat} alt="Card image cap" />
-                <div class="card-body">   
-                  <Link to='artistdetail'>              
-                    <div class="d-flex justify-content-center align-items-center">
-                      <div class="btn-group">                    
-                        <img class="artist-card-img-body" src={artist_head} alt="Card image cap" />
-                        <div class="artistHead"></div>                      
-                        </div>
-                      <div className="artist-text-container">                      
-                        <p class="card-text">Yannick Aaron</p>
-                        <small class="text-muted">French</small>
-                      </div>                                        
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">              
-              <div class="artist-card mb-5 box-shadow"> 
-                <img class="artist-card-img-top" src={cat} alt="Card image cap" />
-                <div class="card-body">   
-                  <Link to='artistdetail'>              
-                    <div class="d-flex justify-content-center align-items-center">
-                      <div class="btn-group">                    
-                        <img class="artist-card-img-body" src={artist_head} alt="Card image cap" />
-                        <div class="artistHead"></div>                      
-                        </div>
-                      <div className="artist-text-container">                      
-                        <p class="card-text">Yannick Aaron</p>
-                        <small class="text-muted">French</small>
-                      </div>                                        
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">              
-              <div class="artist-card mb-5 box-shadow"> 
-                <img class="artist-card-img-top" src={cat} alt="Card image cap" />
-                <div class="card-body">   
-                  <Link to='artistdetail'>              
-                    <div class="d-flex justify-content-center align-items-center">
-                      <div class="btn-group">                    
-                        <img class="artist-card-img-body" src={artist_head} alt="Card image cap" />
-                        <div class="artistHead"></div>                      
-                        </div>
-                      <div className="artist-text-container">                      
-                        <p class="card-text">Yannick Aaron</p>
-                        <small class="text-muted">French</small>
-                      </div>                                        
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">              
-              <div class="artist-card mb-5 box-shadow"> 
-                <img class="artist-card-img-top" src={cat} alt="Card image cap" />
-                <div class="card-body">   
-                  <Link to='artistdetail'>              
-                    <div class="d-flex justify-content-center align-items-center">
-                      <div class="btn-group">                    
-                        <img class="artist-card-img-body" src={artist_head} alt="Card image cap" />
-                        <div class="artistHead"></div>                      
-                        </div>
-                      <div className="artist-text-container">                      
-                        <p class="card-text">Yannick Aaron</p>
-                        <small class="text-muted">French</small>
-                      </div>                                        
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">              
-              <div class="artist-card mb-5 box-shadow"> 
-                <img class="artist-card-img-top" src={cat} alt="Card image cap" />
-                <div class="card-body">   
-                  <Link to='artistdetail'>              
-                    <div class="d-flex justify-content-center align-items-center">
-                      <div class="btn-group">                    
-                        <img class="artist-card-img-body" src={artist_head} alt="Card image cap" />
-                        <div class="artistHead"></div>                      
-                        </div>
-                      <div className="artist-text-container">                      
-                        <p class="card-text">Yannick Aaron</p>
-                        <small class="text-muted">French</small>
-                      </div>                                        
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">              
-              <div class="artist-card mb-5 box-shadow"> 
-                <img class="artist-card-img-top" src={cat} alt="Card image cap" />
-                <div class="card-body">   
-                  <Link to='artistdetail'>              
-                    <div class="d-flex justify-content-center align-items-center">
-                      <div class="btn-group">                    
-                        <img class="artist-card-img-body" src={artist_head} alt="Card image cap" />
-                        <div class="artistHead"></div>                      
-                        </div>
-                      <div className="artist-text-container">                      
-                        <p class="card-text">Yannick Aaron</p>
-                        <small class="text-muted">French</small>
-                      </div>                                        
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">              
-              <div class="artist-card mb-5 box-shadow"> 
-                <img class="artist-card-img-top" src={cat} alt="Card image cap" />
-                <div class="card-body">   
-                  <Link to='artistdetail'>              
-                    <div class="d-flex justify-content-center align-items-center">
-                      <div class="btn-group">                    
-                        <img class="card-img-body" src={artist_head} alt="Card image cap" />
-                        <div class="artistHead"></div>                      
-                        </div>
-                      <div className="artist-text-container">                      
-                        <p class="card-text">Yannick Aaron</p>
-                        <small class="text-muted">French</small>
-                      </div>                                        
-                    </div>
-                  </Link>
-                </div>
+                  );
+                })
+              }
               </div>
             </div>
             
@@ -241,7 +112,7 @@ function Artist() {
         </div>
 </div>           
             <div>
-              <Pagination className="justify-content-end mt-4 mb-5 artist-page-item">
+              <Pagination className="justify-content-center mt-4">
                 <Pagination.First />
                 <Pagination.Prev />
                 <Pagination.Item>{1}</Pagination.Item>

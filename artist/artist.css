@@ -52,8 +52,19 @@
   color: white;
   background-color: #000;
 }
-.card-body{
-  width: 350px;
+.artist-card-body{
+  width: 300px;
+}
+.artist-card{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.justify-content-space-evenly{
+  justify-content: space-evenly;
+}
+.artist-card-text{
+  max-width: 150px;
 }
 @media screen and (max-width: 1440px) {
   .artist-banner {
@@ -62,8 +73,9 @@
 
   .artist-card-img-top {
     object-fit: cover;
-    width: 100%;
+    width: 300px;
     height: 180px;
+    overflow: hidden;
   }
 }
 @media screen and (max-width: 1080px) {
@@ -75,7 +87,7 @@
     width: 100%;
     height: 160px;
   }
-  .card-body{
+  .artist-card-body{
     width: 100%;
   }
   .artist-main-content {
