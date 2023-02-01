@@ -80,16 +80,16 @@ app.get('/space/:spaceId', async (req, res, next) => {
   res.json(data);
 });
 
-app.get('/users', async (req, res, next) => {
-  console.log('這裡是 /users');
+app.get('/artist', async (req, res, next) => {
+  console.log('這裡是 /artist');
   let [data] = await pool.query('SELECT * FROM users WHERE users_valid_role=1');
   res.json(data);
 });
 
-app.get('/users/:usersId', async (req, res, next) => {
-  console.log('/users/:usersId => ', req.params.usersId);
-  let [data] = await pool.query('SELECT * FROM space WHERE users_id=? ', [
-    req.params.usersId,
+app.get('/artist/:artistId', async (req, res, next) => {
+  console.log('/artist/:artistId => ', req.params.artistId);
+  let [data] = await pool.query('SELECT * FROM users WHERE users_id=? ', [
+    req.params.artistId,
   ]);
   res.json(data);
 });

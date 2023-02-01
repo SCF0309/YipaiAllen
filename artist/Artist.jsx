@@ -7,21 +7,19 @@ import Pagination from "react-bootstrap/Pagination";
 import Button from "react-bootstrap/Button";
 import { TbArrowsSort } from 'react-icons/tb'
 import "bootstrap/dist/css/bootstrap.min.css";
-import cat from './cat.jpeg'
-import artist_head from './artist_head.png'
 // import { Button } from 'react-bootstrap';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
 function Artist() {
-  const [users, setArtist] = useState([]);
+  const [artist, setArtist] = useState([]);
 
   useEffect(() => {
     console.log('第二個參數是空陣列');
     // 在 component 初始化的時候跑一次
     // 通常會把去跟後端要資料的動作放在這裡
     async function getArtist() {
-      let response = await axios.get('http://localhost:3001/users');
+      let response = await axios.get('http://localhost:3001/artist');
       setArtist(response.data);
     }
     getArtist();
@@ -76,30 +74,29 @@ function Artist() {
               </Button>
               
             </div>
-        <div className="album py-5 ">
+        <div className="album ">
         <div className="artist-container ">
           <div className="row align-items-start">
             <div className="">              
               <div className="artist-card mb-5 box-shadow"> 
-              {users.map((users, index) => {
+              {artist.map((users, index) => {
                 return(
                     <div key={users.users_id}>
-                      <Link to={`/users/${users.users_id}`}>
-                        <div className="position-relative px-3 py-5">
-                          <img className="artist-card-img-top" src={users.user_imagePage} alt="Card image page" />
+                      <Link to={`/artist/${users.users_id}`}>
+                        <div className="position-relative px- py-5 shadow-sm p-3 mb-5 bg-body rounded">
+                          <img className="artist-card-img-top" src={users.users_main_product} alt="Card image page" />
                           <div className="artist-card-body">
                             <div className="artist-btn-group">
-                            <div class="d-flex justify-content-space-evenly align-items-center">
+                            <div className="d-flex justify-content-space-evenly align-items-center">
                               <img className="artist-card-img-body" src={users.user_imageHead} alt="Card image" />
                               <div className="artist-text-container">                      
-                              <p class="artist-card-text">{users.users_name}</p>
-                              <small class="text-muted">查看更多</small>
+                              <p className="artist-card-text">{users.users_name}</p>
+                              <small className="text-muted">查看更多</small>
                               </div>        
                             </div>
                             </div>
                           </div>    
                         </div>
-                        <h6></h6>
                       </Link>
                     </div>
                   );
@@ -112,7 +109,7 @@ function Artist() {
         </div>
 </div>           
             <div>
-              <Pagination className="justify-content-center mt-4">
+              <Pagination className="artist-page-item justify-content-center mt-4">
                 <Pagination.First />
                 <Pagination.Prev />
                 <Pagination.Item>{1}</Pagination.Item>

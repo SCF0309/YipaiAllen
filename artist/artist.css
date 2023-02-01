@@ -35,8 +35,10 @@
   height: 40px;
 }
 .artist-card-img-top {
-  max-height: 200px;
-  width: 350px;
+  object-fit: cover;
+  width: 300px;
+  height: 180px;
+  overflow: hidden;
 }
 .artist-card-img-body {
   width: 100px;
@@ -53,6 +55,7 @@
   background-color: #000;
 }
 .artist-card-body{
+  margin-top: 10px;
   width: 300px;
 }
 .artist-card{
@@ -84,7 +87,7 @@
   }
   .artist-card-img-top {
     background-size: cover;
-    width: 100%;
+    width: 300px;
     height: 160px;
   }
   .artist-card-body{
@@ -100,7 +103,7 @@
   }
   .artist-card-img-top {
     background-size: cover;
-    width: 100%;
+    width: 300px;
     height: 220px;
   }
 }
@@ -247,7 +250,10 @@
   max-height: 800px;
   object-fit: contain;
 }
-
+.artist-aside-pic{
+  background-color: rgba(24, 24, 24, 0.31);
+  filter:brightness(.3);  
+}
 @media screen and (max-width: 1400px) {
   .detail-intro-text {
     line-height: 30px;
