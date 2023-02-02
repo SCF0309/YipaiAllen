@@ -10,6 +10,8 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
+import { Carousel } from "react-responsive-carousel";
+
 function ArtistDetail() {
   const { artistId } = useParams();
   const [artist, setData] = useState([]);
@@ -29,16 +31,20 @@ function ArtistDetail() {
       return(
         <>
          <div key={users.users_id}>
-         <div className="detail-img">
-        <img className="artist-aside-pic" src={users.user_imagePage} alt="aside" />
-          
-            <div className="artist-detail-name">
-              <h1 className="artist-country">{users.users_name}</h1>
-              {/* <h2 className="artist-name">Yannick Aaron</h2> */}
-              <h3 className="artist-born">{users.users_birth}</h3>
-            </div>
-            </div>
-      <div className="detail-main d-flex">
+         
+           <div className="artist-detail-img">
+            <Carousel showThumbs={false} showStatus={false} showArrows={false}>
+              <div>
+                <img className="artist-aside-pic" src={users.user_imagePage} alt="" />
+                <div className="artist-detail-name">
+                <h1 className="artist-name">{users.users_name}</h1>
+                {/* <h2 className="artist-name">Yannick Aaron</h2> */}
+                <h3 className="artist-born">{users.users_birth}</h3>
+                </div>
+              </div>
+            </Carousel>
+          </div>
+        <div className="detail-main d-flex">
         <div className="detail-intro">
           <div className="detail-intro-text">
             <div>

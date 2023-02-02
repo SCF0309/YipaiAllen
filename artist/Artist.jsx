@@ -10,7 +10,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import { Button } from 'react-bootstrap';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import { Carousel } from "react-responsive-carousel";
 
+import banner from "./artist_main.png"
 function Artist() {
   const [artist, setArtist] = useState([]);
 
@@ -27,9 +29,11 @@ function Artist() {
   return (
     <>
       <header>
-        <div className="artist-banner">
-          <div className="artistImg"></div>
-        </div>
+        <Carousel showThumbs={false} showStatus={false} showArrows={false}>
+          <div>
+            <img src={banner} alt="" />
+          </div>
+        </Carousel>
       </header>
       <div className="artist-container">
         <div className="artist-main-content">
@@ -57,7 +61,7 @@ function Artist() {
             </Dropdown>
           </nav>
           <main>
-            <div className="d-flex justify-content-between m-2">
+            <div className="d-flex justify-content-between m-2 ">
               <div className="col1 text-nowrap d-inline-flex">
                 <Link to="/" className="text-nowrap">
                   <p>首頁</p>
@@ -67,8 +71,7 @@ function Artist() {
                   <p>藝術家</p>
                 </Link>                
               </div>
-              
-              <div className="col-7"></div>
+              <div className="col-２"></div>
               <Button className="button-new-old col-4 text-nowrap" variant="dark">
                 由新至舊<TbArrowsSort />
               </Button>
@@ -78,12 +81,12 @@ function Artist() {
         <div className="artist-container ">
           <div className="row align-items-start">
             <div className="">              
-              <div className="artist-card mb-5 box-shadow"> 
+              <div className="artist-card mb-5 box-shadow px-3 justify-content-center"> 
               {artist.map((users, index) => {
                 return(
-                    <div key={users.users_id}>
+                    <div key={users.users_id} className="px-2">
                       <Link to={`/artist/${users.users_id}`}>
-                        <div className="position-relative px- py-5 shadow-sm p-3 mb-5 bg-body rounded">
+                        <div className="position-relative px-3 py-5 shadow-sm p-3 mb-5 bg-body rounded">
                           <img className="artist-card-img-top" src={users.users_main_product} alt="Card image page" />
                           <div className="artist-card-body">
                             <div className="artist-btn-group">
