@@ -58,7 +58,7 @@
 .artist-card-text{
   max-width: 150px;
 }
-.carousel .control-dots{
+.artist-carousel .carousel .control-dots{
   display: none;
 }
 @media screen and (max-width: 980px) {
@@ -187,12 +187,6 @@
 }
 
 /* icon */
-
-.artistHead {
-  background-image: url("./artist_head.png");
-  height: 50%;
-  background-repeat: no-repeat;
-}
 .icon {
   display: flex;
   justify-content: center;
@@ -220,8 +214,7 @@
   object-fit: contain;
 }
 .artist-aside-pic{
-  background-color: rgba(24, 24, 24, 0.31);
-  filter:brightness(.3);  
+  filter:brightness(.25);  
 }
 @media screen and (max-width: 980px) {
   .detail-intro-text {
@@ -289,5 +282,8 @@
   .detail-intro-img-body {
     text-align: center;
     justify-content: center;
+  }
+  .artist-page-item{
+    display: none;
   }
 }

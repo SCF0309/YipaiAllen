@@ -33,7 +33,7 @@ function ArtistDetail() {
          <div key={users.users_id}>
          
            <div className="artist-detail-img">
-            <Carousel showThumbs={false} showStatus={false} showArrows={false}>
+            <Carousel className='artist-carousel' showThumbs={false} showStatus={false} showArrows={false}>
               <div>
                 <img className="artist-aside-pic" src={users.user_imagePage} alt="" />
                 <div className="artist-detail-name">
