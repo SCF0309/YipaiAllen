@@ -119,7 +119,7 @@ function ArtistDetail() {
                       return (
                         <div key={artistProduct.id} className="px-3">
                           <Link to={`/products/${artistProduct.id}`}>
-                            <div className="position-relative px-3 py-5 shadow-sm p-3 mb-5 bg-body rounded">
+                            <div className="position-relative px-3 py-5 shadow p-3 mb-5 artist-background rounded">
                               <img
                                 className="artist-card-img-top"
                                 src={artistProduct.img_file}
