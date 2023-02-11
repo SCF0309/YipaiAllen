@@ -191,7 +191,7 @@ function Artist() {
                       return (
                         <div key={users.users_id} className="px-3">
                           <Link to={`/artist/${users.users_id}`}>
-                            <div className="position-relative px-3 py-5 shadow-sm p-3 mb-5 bg-body rounded">
+                            <div className="position-relative px-3 py-5 shadow p-3 mb-5 artist-background rounded">
                               <img
                                 className="artist-card-img-top"
                                 src={users.users_main_product}
@@ -199,7 +199,7 @@ function Artist() {
                               />
                               <div className="artist-card-body">
                                 <div className="artist-btn-group">
-                                  <div className="d-flex justify-content-space-evenly align-items-center">
+                                  <div className="d-flex justify-content-space-evenly align-items-center py-3">
                                     <img
                                       className="artist-card-img-body"
                                       src={users.user_imageHead}
